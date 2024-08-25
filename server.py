@@ -27,6 +27,9 @@ def sent_analyzer():
     joy = response['joy']
     sadness = response['sadness']
     dominant_emotion = response['dominant_emotion']
+    # Error handling in case input text is not valid or blank
+    if dominant_emotion is None:
+        return "Invalid text! Please try again!"
     # Return formatted string
     res_0 = "For the given statement, the system response is "
     res_1 = f"'anger': {anger}, 'disgust': {disgust}, 'fear': {fear}, "
